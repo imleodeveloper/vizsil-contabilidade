@@ -2,11 +2,11 @@
 
 :root {
   --background: #F8F8F8;
-  --foreground: #002040;
+  --foreground: #061224;
   
-  --primary: #002040;
-  --secondary: #082850;
-  --accent: #1d6fd1;
+  --primary: #061224;
+  --secondary: #B88A38;
+  --accent: #C4963A;
   
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -42,15 +42,15 @@ body {
 }
 
 .gradient-primary {
-  background: linear-gradient(135deg, #002040 0%, #082850 100%);
+  background: linear-gradient(135deg, #061224 0%, #0A1C36 100%);
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, #082850 0%, #084880 100%);
+  background: linear-gradient(135deg, #B88A38 0%, #C4963A 100%);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #084880 0%, #1d6fd1 100%);
+  background: linear-gradient(135deg, #B88A38 0%, #D4A346 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

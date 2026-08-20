@@ -249,7 +249,7 @@ export default function BlogPage() {
               </div>
               <div className="absolute top-1/2 right-0 -translate-y-1/2 opacity-[0.05] pointer-events-none hidden lg:block">
                 <Image
-                  src="/vizsil-contabilidade.webp"
+                  src="/vizsil-logo.webp"
                   alt="VIZSIL Contabilidade"
                   width={600}
                   height={600}

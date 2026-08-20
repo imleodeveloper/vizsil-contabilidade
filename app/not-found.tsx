@@ -54,7 +54,7 @@ export default function NotFound() {
 
         {/* Floating Logo */}
         <div className="absolute bottom-10 right-10 opacity-10 pointer-events-none hidden lg:block">
-          <Image src="/vizsil-contabilidade.webp" alt="" width={300} height={300} />
+          <Image src="/vizsil-logo.webp" alt="" width={300} height={300} />
         </div>
       </main>
 

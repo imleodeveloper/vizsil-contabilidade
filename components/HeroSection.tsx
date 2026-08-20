@@ -36,7 +36,7 @@ export default function HeroSection() {
           className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-accent/10 blur-[120px] rounded-full"
         />
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00204005_1px,transparent_1px),linear-gradient(to_bottom,#00204005_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#06122405_1px,transparent_1px),linear-gradient(to_bottom,#06122405_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
@@ -127,7 +127,7 @@ export default function HeroSection() {
               <div className="col-span-2 p-6 rounded-3xl bg-gray-50 border border-gray-100 flex items-center gap-6">
                 <div className="w-16 h-16 rounded-2xl bg-white p-2 flex items-center justify-center shadow-sm">
                   <Image
-                    src="/vizsil-contabilidade.webp"
+                    src="/vizsil-logo.webp"
                     alt="Logo"
                     width={40}
                     height={40}

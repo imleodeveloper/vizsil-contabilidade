@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Image
-              src="/vizsil-contabilidade.webp"
+              src="/vizsil-logo.webp"
               alt="VIZSIL Contabilidade"
               width={240}
               height={80}

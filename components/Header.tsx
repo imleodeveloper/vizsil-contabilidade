@@ -254,7 +254,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="relative z-10 flex items-center shrink-0">
           <Image
-            src="/vizsil-contabilidade.webp"
+            src="/vizsil-horizontal.webp"
             alt="VIZSIL Contabilidade"
             width={isScrolled ? 100 : 150}
             height={80}
@@ -347,7 +347,7 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <Image
-                  src="/vizsil-contabilidade.webp"
+                  src="/vizsil-horizontal.webp"
                   alt="VIZSIL Contabilidade"
                   width={120}
                   height={60}

@@ -444,7 +444,7 @@ export default function ContatoPage() {
               {/* Decorative Background */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] pointer-events-none">
                 <Image
-                  src="/vizsil-contabilidade.webp"
+                  src="/vizsil-logo.webp"
                   alt=""
                   width={400}
                   height={400}
