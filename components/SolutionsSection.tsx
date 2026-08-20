@@ -37,7 +37,8 @@ export default function SolutionsSection() {
   return (
     <section className="py-24 bg-primary text-white relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/10 skew-x-12 transform translate-x-20" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/10 skew-x-12 transform translate-x-20 animate-pulse-soft" />
+      <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-accent/5 rounded-full blur-[80px] animate-float" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -87,13 +88,13 @@ export default function SolutionsSection() {
             {solutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-8 rounded-[32px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex gap-6 group"
+                transition={{ delay: index * 0.15, duration: 0.6, ease: "easeOut" }}
+                className="p-8 rounded-[32px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(196,150,58,0.2)] flex gap-6 group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center shrink-0 group-hover:bg-accent transition-colors">
+                <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center shrink-0 group-hover:bg-accent group-hover:scale-110 transition-all duration-500">
                   <solution.icon className="w-8 h-8 text-gradient group-hover:text-white" />
                 </div>
                 <div>

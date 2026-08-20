@@ -89,8 +89,8 @@ export default function BlogSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-[40px] overflow-hidden border border-gray-100 hover:shadow-2xl hover:shadow-primary/5 transition-all group"
+              transition={{ delay: index * 0.15, duration: 0.6, ease: "easeOut" }}
+              className="bg-white rounded-[40px] overflow-hidden border border-gray-100 hover:shadow-[0_20px_40px_-15px_rgba(196,150,58,0.2)] hover:-translate-y-2 transition-all duration-500 ease-out group"
             >
               <div className="relative h-64 overflow-hidden">
                 <Image

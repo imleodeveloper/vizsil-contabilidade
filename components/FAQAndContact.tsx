@@ -315,19 +315,19 @@ export default function FAQAndContact() {
               {faqs.map((faq, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
                 >
                   <button
                     onClick={() =>
                       setActiveIndex(activeIndex === index ? null : index)
                     }
-                    className={`w-full p-6 rounded-3xl border transition-all flex items-start gap-4 text-left ${
+                    className={`w-full p-6 rounded-3xl border transition-all duration-300 flex items-start gap-4 text-left hover:-translate-y-1 ${
                       activeIndex === index
                         ? "bg-primary text-white border-primary shadow-xl shadow-primary/20"
-                        : "bg-gray-50 border-gray-100 hover:border-accent/30"
+                        : "bg-gray-50 border-gray-100 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
                     }`}
                   >
                     <div
@@ -376,10 +376,11 @@ export default function FAQAndContact() {
 
           {/* Chat/Contact Column */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gray-50 rounded-[40px] border border-gray-100 overflow-hidden flex flex-col h-[600px] shadow-2xl shadow-primary/5"
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="bg-gray-50 rounded-[40px] border border-gray-100 overflow-hidden flex flex-col h-[600px] shadow-2xl shadow-primary/5 hover:shadow-[0_30px_60px_-15px_rgba(196,150,58,0.15)] hover:-translate-y-2 transition-all duration-500 ease-out"
           >
             <div className="p-6 bg-primary text-white flex items-center justify-between">
               <div className="flex items-center gap-4">

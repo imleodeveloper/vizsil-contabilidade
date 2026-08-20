@@ -145,14 +145,13 @@ export default function ServicesSection() {
                 {category.items.map((item, index) => (
                   <motion.div
                     key={item.title}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ y: -10 }}
-                    className="p-8 rounded-[32px] bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-2xl hover:shadow-primary/5 transition-all group"
+                    transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
+                    className="p-8 rounded-[32px] bg-gray-50 border border-gray-100 hover:bg-white transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(196,150,58,0.3)] group"
                   >
-                    <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-500">
                       <item.icon className="w-7 h-7" />
                     </div>
                     <h4 className="text-xl font-bold text-primary mb-3">
