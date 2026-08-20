@@ -11,6 +11,21 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'vizsil-contabilidade.vercel.app',
+          },
+        ],
+        destination: 'https://www.vizsilconsultoriacontabil.com.br/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

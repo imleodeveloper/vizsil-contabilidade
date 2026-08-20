@@ -1,0 +1,14 @@
+# VIZSIL Contabilidade - Documentação Completa
+
+Este arquivo contém as informações extensas sobre os serviços e a estrutura da VIZSIL Contabilidade.
+Site: https://www.vizsilconsultoriacontabil.com.br
+
+## Especialidades
+Atendemos empresas prestando serviços de:
+- Escrituração Contábil
+- Planejamento Tributário
+- Departamento Pessoal
+- Abertura, alteração e encerramento de empresas
+- Certificado Digital
+
+Nós garantimos que sua empresa atue dentro das normas fiscais brasileiras, sempre visando economia e segurança.
