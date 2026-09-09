@@ -39,7 +39,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#06122405_1px,transparent_1px),linear-gradient(to_bottom,#06122405_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center w-full">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -50,7 +50,7 @@ export default function HeroSection() {
             <span className="text-gradient">Gestão Contábil</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-600 font-medium leading-relaxed mb-10 max-w-xl">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-medium leading-relaxed mb-10 max-w-xl">
             A VIZSIL une tecnologia de ponta e expertise humana para simplificar
             a vida do empreendedor brasileiro. Abra sua empresa, migre seu MEI e
             tenha suporte especializado.
@@ -72,30 +72,30 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          <div className="mt-12 flex items-center gap-8">
+          <div className="mt-10 grid grid-cols-3 gap-4 sm:flex sm:items-center sm:gap-8">
             <div className="flex flex-col">
-              <span className="text-lg font-black text-primary">
+              <span className="text-sm sm:text-lg font-black text-primary leading-tight">
                 Atendimento dedicado
               </span>
-              <span className="text-sm text-gray-500 font-bold uppercase tracking-wider">
+              <span className="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-wider">
                 Especialistas
               </span>
             </div>
-            <div className="w-px h-10 bg-gray-200" />
+            <div className="hidden sm:block w-px h-10 bg-gray-200" />
             <div className="flex flex-col">
-              <span className="text-lg font-black text-primary">
+              <span className="text-sm sm:text-lg font-black text-primary leading-tight">
                 Operação digital
               </span>
-              <span className="text-sm text-gray-500 font-bold uppercase tracking-wider">
+              <span className="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-wider">
                 Fluxo inteligente
               </span>
             </div>
-            <div className="w-px h-10 bg-gray-200" />
+            <div className="hidden sm:block w-px h-10 bg-gray-200" />
             <div className="flex flex-col">
-              <span className="text-lg font-black text-primary">
+              <span className="text-sm sm:text-lg font-black text-primary leading-tight">
                 Equipe registrada
               </span>
-              <span className="text-sm text-gray-500 font-bold uppercase tracking-wider">
+              <span className="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-wider">
                 Conformidade
               </span>
             </div>

@@ -102,10 +102,15 @@ export default function SolutionsSection() {
                   <p className="text-white/60 leading-relaxed mb-4">
                     {solution.description}
                   </p>
-                  <button className="flex items-center gap-2 text-gradient font-bold text-sm group/btn">
+                  <a
+                    href="https://wa.me/5511999999999?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20VIZSIL!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gradient font-bold text-sm group/btn"
+                  >
                     Saiba mais
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             ))}
