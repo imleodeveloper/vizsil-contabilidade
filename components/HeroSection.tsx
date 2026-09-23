@@ -61,16 +61,36 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="lg:hidden order-1 relative h-72 sm:h-96 w-full shrink-0"
+          className="lg:hidden order-1 relative w-full shrink-0
+                     h-80
+                     portrait:h-[52vh]
+                     landscape:h-52"
         >
           <Image
             src="/contadora-elisangela.webp"
             alt="Contadora especialista da VIZSIL, escritório de contabilidade em Guarulhos e São Paulo."
             fill
-            className="object-cover object-center rounded-bl-[60px]"
+            className="object-cover rounded-bl-[60px]
+                       portrait:[object-position:50%_30%]
+                       landscape:object-center"
             priority
             sizes="100vw"
           />
+          {/* Badges overlay — mesma lógica do desktop */}
+          <div className="absolute bottom-4 left-4 flex flex-col gap-1.5 z-10">
+            <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
+              <Shield className="w-3.5 h-3.5 text-primary shrink-0" aria-hidden="true" />
+              <span className="font-bold text-primary text-[11px]">Segurança Total</span>
+            </div>
+            <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
+              <TrendingUp className="w-3.5 h-3.5 text-green-600 shrink-0" aria-hidden="true" />
+              <span className="font-bold text-primary text-[11px]">Crescimento</span>
+            </div>
+            <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
+              <Image src="/vizsil-logo.webp" alt="VIZSIL Dashboard" width={12} height={12} className="object-contain shrink-0" />
+              <span className="font-bold text-primary text-[11px]">VIZSIL Dashboard</span>
+            </div>
+          </div>
         </motion.div>
 
         {/* ── Text content ── */}
@@ -106,22 +126,6 @@ export default function HeroSection() {
             >
               Falar com Consultor
             </Link>
-          </div>
-
-          {/* Mobile cards */}
-          <div className="mt-6 flex flex-wrap gap-2 lg:hidden">
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-blue-50 border border-blue-100">
-              <Shield className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
-              <span className="font-bold text-primary text-xs">Segurança Total</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-green-50 border border-green-100">
-              <TrendingUp className="w-4 h-4 text-green-600 shrink-0" aria-hidden="true" />
-              <span className="font-bold text-primary text-xs">Crescimento</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-gray-50 border border-gray-100">
-              <Image src="/vizsil-logo.webp" alt="VIZSIL Dashboard" width={14} height={14} className="object-contain shrink-0" />
-              <span className="font-bold text-primary text-xs">VIZSIL Dashboard</span>
-            </div>
           </div>
 
           {/* Stats row */}
