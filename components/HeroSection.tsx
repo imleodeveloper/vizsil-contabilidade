@@ -62,16 +62,16 @@ export default function HeroSection() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="lg:hidden order-1 relative w-full shrink-0
-                     h-80
-                     portrait:h-[52vh]
-                     landscape:h-52"
+                     h-72
+                     portrait:h-[45vh]
+                     landscape:h-44"
         >
           <Image
             src="/contadora-elisangela.webp"
             alt="Contadora especialista da VIZSIL, escritório de contabilidade em Guarulhos e São Paulo."
             fill
             className="object-cover rounded-bl-[60px]
-                       portrait:[object-position:50%_30%]
+                       portrait:[object-position:50%_45%]
                        landscape:object-center"
             priority
             sizes="100vw"

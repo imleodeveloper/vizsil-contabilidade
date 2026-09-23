@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -179,11 +179,29 @@ const solutionLinks: MenuCategory[] = [
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const lastScrollY = useRef(0);
+
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      setIsScrolled(currentY > 20);
+
+      if (window.innerWidth < 1024) {
+        if (currentY > lastScrollY.current && currentY > 80) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -241,14 +259,15 @@ export default function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6",
         isScrolled ? "py-3" : "py-6",
+        !isVisible && "-translate-y-full",
       )}
     >
       <div
         className={cn(
           "max-w-7xl mx-auto flex items-center justify-between transition-all duration-500 rounded-full px-8 py-3",
-          isScrolled
-            ? "bg-white/80 backdrop-blur-xl shadow-lg border border-white/20"
-            : "bg-transparent",
+          // Mobile: sempre com background; Desktop: só quando rolou
+          "bg-white/80 backdrop-blur-xl shadow-lg border border-white/20",
+          !isScrolled && "lg:bg-transparent lg:shadow-none lg:border-white/0 lg:[backdrop-filter:none]",
         )}
       >
         {/* Logo */}
