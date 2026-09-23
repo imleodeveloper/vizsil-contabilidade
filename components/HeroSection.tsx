@@ -8,53 +8,69 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background min-h-screen">
+    <section className="relative bg-background min-h-screen overflow-x-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#06122405_1px,transparent_1px),linear-gradient(to_bottom,#06122405_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute bottom-0 left-0 w-3/5 h-1/3 bg-gradient-to-t from-background to-transparent" />
       </div>
 
+      {/* ── Desktop image — absolute top-0 right-0, atrás do header ── */}
+      <motion.div
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        className="hidden lg:block absolute top-0 right-0 w-[46%] h-screen z-[1]"
+      >
+        <Image
+          src="/contadora-elisangela.webp"
+          alt="Contadora especialista da VIZSIL, escritório de contabilidade em Guarulhos e São Paulo. Abertura de empresa, MEI e gestão fiscal."
+          fill
+          className="object-cover object-center rounded-bl-[80px]"
+          priority
+          sizes="46vw"
+        />
+        {/* Gradient blend — left edge */}
+        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+        {/* Floating badge cards */}
+        <div className="flex flex-col gap-2 absolute left-6 top-[42%] z-10">
+          <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
+            <Shield className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+            <span className="font-bold text-primary text-xs">Segurança Total</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
+            <TrendingUp className="w-4 h-4 text-green-600 shrink-0" aria-hidden="true" />
+            <span className="font-bold text-primary text-xs">Crescimento</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
+            <Image
+              src="/vizsil-logo.webp"
+              alt="VIZSIL Dashboard"
+              width={14}
+              height={14}
+              className="object-contain shrink-0"
+            />
+            <span className="font-bold text-primary text-xs">VIZSIL Dashboard</span>
+          </div>
+        </div>
+      </motion.div>
+
       <div className="flex flex-col lg:flex-row min-h-screen">
-        {/* ── MOBILE: photo at top (order-1), cut by fixed header ── */}
+        {/* ── Mobile: foto no topo ── */}
         <motion.div
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="order-1 lg:order-2 lg:w-[45%] relative h-72 sm:h-96 lg:h-screen lg:self-start shrink-0"
+          className="lg:hidden order-1 relative h-72 sm:h-96 w-full shrink-0"
         >
           <Image
             src="/contadora-elisangela.webp"
-            alt="Contadora especialista da VIZSIL, escritório de contabilidade em Guarulhos e São Paulo. Abertura de empresa, MEI e gestão fiscal."
+            alt="Contadora especialista da VIZSIL, escritório de contabilidade em Guarulhos e São Paulo."
             fill
-            className="object-cover object-center rounded-bl-[60px] lg:rounded-bl-[80px]"
+            className="object-cover object-center rounded-bl-[60px]"
             priority
-            sizes="(max-width: 1024px) 100vw, 45vw"
+            sizes="100vw"
           />
-          {/* Gradient blend left edge (desktop) */}
-          <div className="hidden lg:block absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-
-          {/* Floating badge cards — desktop only, left side of photo */}
-          <div className="hidden lg:flex flex-col gap-2 absolute left-5 top-[38%] z-10">
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
-              <Shield className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
-              <span className="font-bold text-primary text-xs">Segurança Total</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
-              <TrendingUp className="w-4 h-4 text-green-600 shrink-0" aria-hidden="true" />
-              <span className="font-bold text-primary text-xs">Crescimento</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
-              <Image
-                src="/vizsil-logo.webp"
-                alt="VIZSIL Dashboard"
-                width={14}
-                height={14}
-                className="object-contain shrink-0"
-              />
-              <span className="font-bold text-primary text-xs">VIZSIL Dashboard</span>
-            </div>
-          </div>
         </motion.div>
 
         {/* ── Text content ── */}
@@ -62,7 +78,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="order-2 lg:order-1 lg:w-[55%] flex flex-col justify-center relative z-10
+          className="order-2 lg:w-[54%] flex flex-col justify-center relative z-[2]
                      px-6 sm:px-10 lg:pl-[8vw] lg:pr-12 pt-8 lg:pt-32 pb-20"
         >
           <h1 className="text-5xl md:text-6xl font-black text-primary leading-[1.1] tracking-tighter mb-6">
