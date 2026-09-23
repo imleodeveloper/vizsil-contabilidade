@@ -21,13 +21,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="order-1 lg:order-2 lg:w-[45%] relative h-64 sm:h-80 lg:h-[78vh] lg:self-start shrink-0"
+          className="order-1 lg:order-2 lg:w-[45%] relative h-72 sm:h-96 lg:h-screen lg:self-start shrink-0"
         >
           <Image
             src="/contadora-elisangela.webp"
             alt="Contadora especialista da VIZSIL, escritório de contabilidade em Guarulhos e São Paulo. Abertura de empresa, MEI e gestão fiscal."
             fill
-            className="object-cover object-top rounded-bl-[60px] lg:rounded-bl-[80px]"
+            className="object-cover object-center rounded-bl-[60px] lg:rounded-bl-[80px]"
             priority
             sizes="(max-width: 1024px) 100vw, 45vw"
           />
