@@ -258,7 +258,7 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6",
-        isScrolled ? "py-3" : "py-6",
+        isScrolled ? "py-3" : "py-3 lg:py-6",
         !isVisible && "-translate-y-full",
       )}
     >
@@ -275,7 +275,7 @@ export default function Header() {
           <Image
             src="/vizsil-horizontal.webp"
             alt="VIZSIL Contabilidade"
-            width={isScrolled ? 100 : 150}
+            width={isScrolled ? 100 : 110}
             height={80}
             className="object-cover transition-all duration-500"
             priority
