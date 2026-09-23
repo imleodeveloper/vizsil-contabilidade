@@ -21,7 +21,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="order-1 lg:order-2 lg:w-[45%] relative h-72 sm:h-96 lg:h-auto lg:min-h-screen shrink-0"
+          className="order-1 lg:order-2 lg:w-[45%] relative h-64 sm:h-80 lg:h-[78vh] lg:self-start shrink-0"
         >
           <Image
             src="/contadora-elisangela.webp"
@@ -34,34 +34,25 @@ export default function HeroSection() {
           {/* Gradient blend left edge (desktop) */}
           <div className="hidden lg:block absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent pointer-events-none" />
 
-          {/* Floating cards — desktop only, overlaid on photo */}
-          <div className="hidden lg:block absolute bottom-12 left-6 right-6 space-y-3 z-10">
-            <div className="flex gap-3">
-              <div className="flex-1 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/80 shadow-xl shadow-black/10">
-                <Shield className="w-7 h-7 text-primary mb-2" aria-hidden="true" />
-                <h3 className="font-bold text-primary text-sm mb-1">Segurança Total</h3>
-                <p className="text-xs text-gray-600">Seus dados protegidos com tecnologia de ponta.</p>
-              </div>
-              <div className="flex-1 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/80 shadow-xl shadow-black/10">
-                <TrendingUp className="w-7 h-7 text-green-600 mb-2" aria-hidden="true" />
-                <h3 className="font-bold text-primary text-sm mb-1">Crescimento</h3>
-                <p className="text-xs text-gray-600">Foque no seu negócio, nós cuidamos da burocracia.</p>
-              </div>
+          {/* Floating badge cards — desktop only, left side of photo */}
+          <div className="hidden lg:flex flex-col gap-2 absolute left-5 top-[38%] z-10">
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
+              <Shield className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+              <span className="font-bold text-primary text-xs">Segurança Total</span>
             </div>
-            <div className="p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/80 shadow-xl shadow-black/10 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-sm shrink-0">
-                <Image
-                  src="/vizsil-logo.webp"
-                  alt="VIZSIL Contabilidade - Logo"
-                  width={32}
-                  height={32}
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-primary">VIZSIL Dashboard</h3>
-                <p className="text-sm text-gray-600">Acesse seus impostos e documentos em um só lugar.</p>
-              </div>
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
+              <TrendingUp className="w-4 h-4 text-green-600 shrink-0" aria-hidden="true" />
+              <span className="font-bold text-primary text-xs">Crescimento</span>
+            </div>
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/40 backdrop-blur-md border border-white/40 shadow-sm">
+              <Image
+                src="/vizsil-logo.webp"
+                alt="VIZSIL Dashboard"
+                width={14}
+                height={14}
+                className="object-contain shrink-0"
+              />
+              <span className="font-bold text-primary text-xs">VIZSIL Dashboard</span>
             </div>
           </div>
         </motion.div>
@@ -102,31 +93,18 @@ export default function HeroSection() {
           </div>
 
           {/* Mobile cards */}
-          <div className="mt-8 grid grid-cols-2 gap-3 lg:hidden">
-            <div className="p-4 rounded-2xl bg-blue-50 border border-blue-100">
-              <Shield className="w-7 h-7 text-primary mb-2" aria-hidden="true" />
-              <h3 className="font-bold text-primary text-sm mb-1">Segurança Total</h3>
-              <p className="text-xs text-gray-600">Seus dados protegidos com tecnologia de ponta.</p>
+          <div className="mt-6 flex flex-wrap gap-2 lg:hidden">
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-blue-50 border border-blue-100">
+              <Shield className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+              <span className="font-bold text-primary text-xs">Segurança Total</span>
             </div>
-            <div className="p-4 rounded-2xl bg-green-50 border border-green-100">
-              <TrendingUp className="w-7 h-7 text-green-600 mb-2" aria-hidden="true" />
-              <h3 className="font-bold text-primary text-sm mb-1">Crescimento</h3>
-              <p className="text-xs text-gray-600">Foque no seu negócio, nós cuidamos da burocracia.</p>
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-green-50 border border-green-100">
+              <TrendingUp className="w-4 h-4 text-green-600 shrink-0" aria-hidden="true" />
+              <span className="font-bold text-primary text-xs">Crescimento</span>
             </div>
-            <div className="col-span-2 p-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-sm shrink-0">
-                <Image
-                  src="/vizsil-logo.webp"
-                  alt="VIZSIL Contabilidade"
-                  width={32}
-                  height={32}
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-primary text-sm">VIZSIL Dashboard</h3>
-                <p className="text-xs text-gray-600">Acesse seus impostos e documentos em um só lugar.</p>
-              </div>
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-gray-50 border border-gray-100">
+              <Image src="/vizsil-logo.webp" alt="VIZSIL Dashboard" width={14} height={14} className="object-contain shrink-0" />
+              <span className="font-bold text-primary text-xs">VIZSIL Dashboard</span>
             </div>
           </div>
 
