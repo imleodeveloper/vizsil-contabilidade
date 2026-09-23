@@ -20,13 +20,13 @@ export default function HeroSection() {
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="hidden lg:block absolute top-0 right-0 w-[46%] h-screen z-[1]"
+        className="hidden lg:block absolute top-0 right-0 w-[38%] h-[85vh] z-[1]"
       >
         <Image
           src="/contadora-elisangela.webp"
           alt="Contadora especialista da VIZSIL, escritório de contabilidade em Guarulhos e São Paulo. Abertura de empresa, MEI e gestão fiscal."
           fill
-          className="object-cover object-center rounded-bl-[80px]"
+          className="object-cover object-center rounded-bl-[140px]"
           priority
           sizes="46vw"
         />
