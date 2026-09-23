@@ -71,7 +71,7 @@ export default function HeroSection() {
             alt="Contadora especialista da VIZSIL, escritório de contabilidade em Guarulhos e São Paulo."
             fill
             className="object-cover rounded-bl-[60px]
-                       portrait:[object-position:50%_45%]
+                       portrait:[object-position:50%_65%]
                        landscape:object-center"
             priority
             sizes="100vw"
